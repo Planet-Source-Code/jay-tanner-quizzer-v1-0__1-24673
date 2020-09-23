@@ -1,0 +1,77 @@
+
+A quiz file designed for use with the Quizzer v1.0 program is constructed
+in accordance with the following simple format rules.
+
+
+1 ... Quiz files are simply plain text files but they are given the
+      file extension ".quiz" to distinguish them from other files
+      and identify them to the program.
+      
+      
+2 ... The first line in the quiz file consists of a <TITLE> tag, similar
+      to the one used in HTML, followed by the title that will be shown
+      when the user takes the quiz.  There is no closing tag, since it
+      is all contained on a single line.      
+      
+      
+3 ... Each question is contained on a single line starting with a <Q> tag
+      and the line can be of any length.
+      
+
+4 ... Each series of multiple-choice answers occupies a single line starting
+      with an <A> tag immediately following the line with the corresponding
+      question.  The answers are each separated by a delimiting | character
+      (ASCII code 124) and there can be up to 6 possible multi-choice answers
+      per question.  The correct answer in the list must be marked with a
+      preceding * (asterisk) character.
+
+
+A quiz may have any number of questions by simply following the same format
+for each question and series of multiple choice answers.
+
+Below is a simple example of the format for a 3 question quiz file with the
+title "Science 101"
+
+The file name could be "Science_101.quiz"
+
+
+-------------------
+
+
+<TITLE>Science 101
+<Q>The most abundant element in the universe is ...
+<A>*Hydrogen|Water|Helium|Oxygen|Nitrogen|None of these answers.
+<Q>The only planet with a ring system in our solar system is ...
+<A>Jupiter|Saturn|Uranus|Neptune|*None of these answers apply.
+<Q>When it is summer in North America, it is winter in ...
+<A>*Australia|Japan|Europe|None of these answers.
+
+
+-------------------
+
+NOTES:
+
+When the program runs the quiz, the questions and the related answers
+are given in a randomized order each time.
+
+The very first line in the quiz data file is the <TITLE> line.
+
+Notice the delimiters between the multiple choice answers and that the
+correct answer is marked with an asterisk in the answers line.  It makes
+no difference where the correct answer is in the line, as long as it is
+marked by an asterisk.  The asterisk character tells the program which
+answer is the correct one so it can respond properly to the quiz taker's
+guesses.
+
+The <TAGS> at the beginning of each line are NOT case sensitive.
+
+
+There is a 10 question demo quiz data file provided with the program source
+code which can also be viewed with a text editor like NotePad and used as a
+guide to creating another quiz file.
+
+The program looks in the same folder as the executable for the quiz data
+files.  All quiz data files found will be listed by the program and can be
+selected by simply double-clicking on the filename.
+
+
